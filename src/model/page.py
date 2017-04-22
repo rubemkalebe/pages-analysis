@@ -1,6 +1,6 @@
 
 
-class Pages(obejct):
+class Page(obejct):
 
 	def _init_(self,page_name, page_id, category): 
 		self.__page_name = page_name
@@ -34,7 +34,7 @@ class Pages(obejct):
             'category' : self.__category,
             
         }
-        
+
 	page_id = property(get_id, set_id, None, None)
 	page_name = property(get_name, set_name, None, None)
 	category = property(get_category, set_category, None, None)
