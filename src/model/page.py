@@ -2,7 +2,7 @@
 
 class Page(object):
 
-	def _init_(self,page_name, page_id, category): 
+	def __init__(self,page_name, page_id, category): 
 		self.__page_name = page_name
 		self.__page_id = page_id
 		self.__category = category

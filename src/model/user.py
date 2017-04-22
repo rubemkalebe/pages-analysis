@@ -2,7 +2,7 @@
 
 class User(object):
 
-	def _init_(self,facebook_id, initials, gender, birthday, location,pages): 
+	def __init__(self,facebook_id, initials, gender, birthday, location,pages): 
 		self.__facebook_id = facebook_id
 		self.__initials = initials
 		self.__gender = gender 
