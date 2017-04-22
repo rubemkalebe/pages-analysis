@@ -1,6 +1,6 @@
 
 
-class User(obejct):
+class User(object):
 
 	def _init_(self,facebook_id, initials, gender, birthday, location,pages): 
 		self.__facebook_id = facebook_id
@@ -49,7 +49,7 @@ class User(obejct):
 		return self.__pages
 
 	def user_as_dict(self):
-		 return {
+		return {
             'facebook_id' : self.__facebook_id,
             'initials' : self.__initials,
             'gender' : self.__gender,
@@ -64,8 +64,3 @@ class User(obejct):
 	birthday = property(get_birthday, set_birthday, None, None)
 	location = property(get_location, set_location, None, None)
 	pages = property(get_pages, set_pages, None, None)
-
-
-
-
-    
