@@ -48,7 +48,7 @@ class User(obejct):
 	def get_pages(self):
 		return self.__pages
 
-	def user_as_dict():
+	def user_as_dict(self):
 		 return {
             'facebook_id' : self.__facebook_id,
             'initials' : self.__initials,
@@ -57,12 +57,13 @@ class User(obejct):
             'location' : self.__location,
             'pages' : self.__pages
         }
-    facebook_id = property(get_id, set_id, None, None)
-    initials = property(get_initials, set_initials, None, None)
-    gender = property(get_gender, set_gender, None, None)
-    birthday = property(get_birthday, set_birthday, None, None)
-    location = property(get_location, set_location, None, None)
-    pages = property(get_pages, set_pages, None, None)
+	
+	facebook_id = property(get_id, set_id, None, None)
+	initials = property(get_initials, set_initials, None, None)
+	gender = property(get_gender, set_gender, None, None)
+	birthday = property(get_birthday, set_birthday, None, None)
+	location = property(get_location, set_location, None, None)
+	pages = property(get_pages, set_pages, None, None)
 
 
 
