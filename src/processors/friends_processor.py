@@ -1,9 +1,11 @@
 import facebook
 import requests
-from helpers import token
-from model.user import User
-from model.page import Page
-from database.user_dao import UserDAO
+from ..helpers import token
+from ..model.user import User
+from ..model.page import Page
+from ..database.user_dao import UserDAO
+
+from tqdm import tqdm
 
 class FriendsProcessor(object):
     '''
@@ -29,20 +31,21 @@ class FriendsProcessor(object):
                 break
             
     def processResult(self, friends):
-        for dic in friends['data']:
+        for dic in tqdm(friends['data']):
             self.processFriend(dic['id'])
         
     def processFriend(self, fid):
         likes = self.hasLikes(fid)
-        if len(likes['data']) > 0:
+        if len(likes['data']) > 0 and self.__userDAO.find_user(fid) == None:
             friend = self.__graph.get_object(fid)
+            
             u = User(
                 facebook_id = friend['id'],
                 initials = friend['first_name'][0] + friend['last_name'][0],
                 gender = friend['gender'],
-                birthday = None,
-                location = None,
-                pages = [] 
+                birthday = '',
+                location = '',
+                pages = []
             )
             
             try:
