@@ -1,4 +1,5 @@
-from model.user import User
+from ..model.user import User
+from ..model.page import Page
 
 class UserDAO(object):
     '''
@@ -26,7 +27,8 @@ class UserDAO(object):
                 gender = emp['gender'],
                 birthday = emp['birthday'],
                 location = emp['location'],
-                pages = emp['pages']
+                pages = [(Page(page_name = x['page_name'], page_id = x['page_id'],
+                            category = x['category'])) for x in emp['pages']]
             )
             users.add(u)
         return users
