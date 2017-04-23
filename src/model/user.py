@@ -55,7 +55,7 @@ class User(object):
             'gender' : self.__gender,
             'birthday' : self.__birthday,
             'location' : self.__location,
-            'pages' : self.__pages
+            'pages' : [x.page_as_dict() for x in self.__pages]
         }
 	
 	facebook_id = property(get_id, set_id, None, None)
