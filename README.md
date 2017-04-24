@@ -4,7 +4,7 @@ Identify the category of pages our friends from Natal/RN/Brazil usually like on 
 #### Group members
 Anderson Matheus Silva
 Augusto Chaves de Oliveira
-Luiz Eduardo Marques
+Luiz Eduardo Marques Silva
 Maria Ester de Carvalho
 Rubem Kalebe Santos
 
