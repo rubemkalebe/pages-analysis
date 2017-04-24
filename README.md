@@ -1,7 +1,7 @@
 # Pages analysis
 Identify the category of pages our friends from Natal/RN/Brazil usually like on Facebook.
 
-Repository link: https://github.com/rubemkalebe/municipal-analysis/
+Repository link: https://github.com/rubemkalebe/pages-analysis
 
 #### Group members
 - Anderson Matheus Silva
