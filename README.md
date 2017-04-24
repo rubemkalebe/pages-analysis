@@ -8,3 +8,6 @@ Identify the category of pages our friends from Natal/RN/Brazil usually like on 
 - Maria Ester de Carvalho
 - Rubem Kalebe Santos
 
+#### MongoDB
+
+See <a href="https://www.youtube.com/watch?v=K_5mj3-_uJQ">this video</a> for more information about MongoDB installation.
